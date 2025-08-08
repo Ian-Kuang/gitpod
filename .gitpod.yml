@@ -10,10 +10,10 @@ tasks:
       mvn -version
       
       # Build the project
-      mvn clean install
+      ./gradlew clean build
     command: |
       # Run Spring Boot application
-      mvn spring-boot:run
+      ./gradlew bootRun
 
 ports:
   - port: 8080
@@ -21,8 +21,7 @@ ports:
 
 vscode:
   extensions:
-    - vscjava.vscode-spring-boot
-    - vscjava.vscode-maven
-    - redhat.java
-    - Pivotal.vscode-spring-boot
-    - eamodio.gitlens
+    - vscjava.vscode-gradle  # Gradle 项目管理
+    - redhat.java             # Java 语言支持
+    - vscjava.vscode-spring-boot # Spring Boot 辅助
+    - eamodio.gitlens         # 代码历史追踪
